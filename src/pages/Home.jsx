@@ -2,7 +2,7 @@ import { useState } from 'react';
 
 export default function Home() {
   const [height, setHeight] = useState('');
-  const [modalOpen, setModalOpen] = useState(false);
+  const [modalOpen, setModalOpen] = useState(true);
 
   const handleInputChange = (event) => {
     setHeight(event.target.value);
@@ -19,13 +19,13 @@ export default function Home() {
         <p className='text-zinc-700 font-thin'>It uses complicated calculations to calculate your height</p>
         <form onSubmit={handleSubmit}>
             <div className='flex items-center space-x-2'>
-                <p className='w-fit w-[150px]'>Enter your height :</p>
+                <p className='w-fit'>Enter your height :</p>
                 <input
                     type="number"
                     value={height}
                     onChange={handleInputChange}
                     required
-                    className='input input-bordered w-full w-fit'
+                    className='input input-bordered w-fit'
                 />
                 <p className='w-fit'>cm</p>
             </div>
@@ -46,7 +46,6 @@ export default function Home() {
             {modalOpen && (
             <p>Your height is {height}cm!</p>
             )}
-            {/* <p className="py-4">Press ESC key or click on ✕ button to close</p> */}
         </div>
     </dialog>
     </div>
