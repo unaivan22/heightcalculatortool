@@ -19,7 +19,7 @@ export default function Home() {
         <p className='text-zinc-700 font-thin'>It uses complicated calculations to calculate your height</p>
         <form onSubmit={handleSubmit}>
             <div className='flex items-center space-x-2'>
-                <p className='w-fit'>Enter your height :</p>
+                <p className='w-fit'>Input your height </p>
                 <input
                     type="number"
                     value={height}
